@@ -14,5 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home',[
+        "name" => "Agam",
+        "email" => "agamatmaja772@gmail.com",
+        "image" => "Agam.jpg"
+    ]);
+});
+
+Route::get('/about', function () {
+    return view('about', [
+        "name" => "Agam",
+        "email" => "agamatmaja772@gmail.com",
+        "image" => "Agam.jpg"
+    ]);
+});
+
+Route::get('/blog', function () {
+    return view('posts', [
+        "name" => "Agam",
+        "email" => "agamatmaja772@gmail.com",
+        "image" => "Agam.jpg"
+    ]);
 });

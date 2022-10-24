@@ -24,9 +24,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
-        "name" => "Ayu Putri",
-        "email" => "ayupuutri0@gmail.com",
-        "image" => "Ayu.jpg"
+        "name" => "Agam Ramdhan Kamil Atmaja",
+        "email" => "agamatmaja772@gmail.com",
+        "image" => "Agam.jpg"
     ]);
 });
 

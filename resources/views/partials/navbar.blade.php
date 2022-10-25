@@ -13,14 +13,14 @@
           <a class="nav-link {{ ($active === "about") ? 'active' : '' }}" href="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($active === "post") ? 'active' : '' }}" href="/blog">Blog</a>
+          <a class="nav-link {{ ($active === "post") ? 'active' : '' }}" href="/posts">Blog</a>
         </li>
           <li class="nav-item">
               <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Categories</a>
           </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="{{ request('search') }}">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>

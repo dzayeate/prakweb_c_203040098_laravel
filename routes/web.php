@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
@@ -27,9 +29,9 @@ Route::get('/about', function () {
     return view('about', [
         "title" => "About",
         "active" => "about",
-        "name" => "Kalam",
-        "email" => "kalam@mail.com",
-        "image" => "kalam.png",
+        "name" => "Agam Ramdhan",
+        "email" => "Agam@mail.com",
+        "image" => "agam.jpg",
     ]);
 });
 
@@ -54,4 +56,6 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth');
 
+
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
